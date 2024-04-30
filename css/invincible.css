@@ -1,0 +1,547 @@
+@font-face {
+    font-family:'Cairo';
+    src: url('../media/cairo_font/Cairo-VariableFont_slnt\,wght.ttf');
+}
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    color: white;
+    transition:all .3s linear;
+}
+body{
+    /* width: 100%;
+    height: 100vh; */
+    background: rgb(26, 25, 25);
+    background:url('../media/invincble.jpeg')no-repeat center/cover;
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    font-family: Cairo,Arial, Helvetica, sans-serif;
+}
+.header{
+    margin-top: -2%;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    /* display: block; */
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+}
+header{
+    position: absolute;
+    width: 80%;
+    height: 90%;
+    border: 1px solid #FAF9F6;
+    /* border-radius: 20px; */
+    overflow: hidden;
+    box-shadow: 0px 10px 25px -5px #880086a9;
+}
+header::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background:url(../media/invincble.jpeg) no-repeat center/cover;
+    opacity: .6;
+    z-index: -1;
+
+}
+header::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* background: linear-gradient(200deg, transparent ,#8800867a); */
+    z-index: -1;
+}
+header video{
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; 
+    object-fit: cover;
+    /* width: 130%;
+    height: 190%;
+    top: -46%;
+    left: -15%;
+    z-index: -1; */
+    /* display: flex; */
+    /* align-items: center; */
+    /* justify-content: center; */
+}
+nav{
+    width: 100%;
+    height: 10%;
+    /* border-top-left-radius: 20px; */
+    /* border-top-right-radius: 20px; */
+    /* border: 1px solid rgb(255, 255, 255) ; */
+    /* background:linear-gradient(360deg , rgba(68, 1, 68) , #000000 ); */
+    background: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 50px;
+}
+nav .logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+nav .logo img {
+    width: 200px;
+    padding-right: 30px;
+}
+nav .logo img:hover{
+    width: 250px;
+    opacity: .8;
+}
+nav .logo ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+}
+nav .logo ul li{
+    padding: 3px 15px;
+}
+nav .logo ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 150%;
+    font-weight: bold;
+    transition: .3s linear;
+}
+
+nav .logo  ul li a:hover{
+    color: 	#DC143C;
+    transition: .3s linear;
+}
+nav .logo  ul li a:hover i{
+    color: 	#DC143C;
+    transition: .3s linear;
+}
+nav .search_user{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+nav .search_user input{
+    border-radius: 25px;
+    padding: 3px 15px;
+    border: none;
+    outline: none;
+    background: rgb(255, 255, 255,.3);
+    color: white;
+    margin: 10px;
+}
+nav .search_user input::placeholder{
+    color: white;
+}
+nav .search_user ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+}
+nav .search_user ul li{
+    padding: 3px 10px;
+}
+nav .search_user ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 100%;
+    font-weight: bold;
+    transition: .3s linear;
+}
+nav .search_user ul li a:hover{
+    color: purple;
+}
+nav .search_user .search{
+    overflow: auto;
+    position: absolute;
+    width: 320px;
+    height: 190px;
+    /* border: 1px solid white; */
+    right: 0;
+    top: 55px;
+    z-index: 5;
+}
+nav .search_user .search::-webkit-scrollbar{
+    width: 5px;
+    background: rgb(255, 255, 255,.2);
+    visibility: hidden;
+
+}
+nav .search_user .search::-webkit-scrollbar-thumb{
+    width: 5px;
+    background: rgb(255, 255, 255,.5);
+    visibility: hidden;
+    
+}
+nav .search_user .search:hover::-webkit-scrollbar{
+    visibility: visible;
+}
+nav .search_user .search:hover::-webkit-scrollbar-thumb{
+    visibility: visible;
+}
+nav .search_user .search .card{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    padding: 3px 0px;
+    text-decoration: none;
+    display: none;
+}
+nav .search_user .search .card::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgb(255, 255, 255, .1);
+    backdrop-filter: blur(5px);
+    border-radius: 5px;
+    z-index: -1;
+}
+nav .search_user .search .card img{
+    width: 28px;
+    /* height: 0px; */
+    border-radius: 0;
+    margin-left: 8px;
+}
+nav .search_user .search .card .cont{
+    margin-left: 10px;
+    color: white;
+}
+nav .search_user .search .card .cont h3{
+    font-size: 15px;
+    line-height: 25px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 250px;
+}
+nav .search_user .search .card .cont p{
+    font-size: 10px;
+    color: rgb(255, 255, 255,.8);
+}
+header .content{
+    position: relative;
+    color: white;
+    margin-top: 50px;
+    margin-left: 50px;
+}
+header .content h1{
+    font-size: 50px;
+}
+header .content p{
+    font-size: 110%;
+    width: 350px;
+    word-break: break-all;
+}
+header .content .details{
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+header .content .details h6{
+    color: rgb(255, 255, 255,.8);
+    font-size: 10px;
+    margin-right: 10px;
+}
+header .content .details h4{
+    color: #fff;
+    font-size: 10px;
+    margin-right: 10px ;
+}
+header .content .details h3 span{
+    font-size: 20px;
+    /* background-color: yellow; */
+    /* color: black; */
+    padding: 0px 3px;
+    margin: 0px 5px 0px 5px;
+}
+header .content .details h3 i{
+    color: orange;
+    font-size: 40px;
+}
+header .content .btns{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}
+header .content .btns a{
+    padding: 8px 12px;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    background: linear-gradient(90deg , rgba(68, 1, 68) , #0079ff);
+    border-radius: 25px;
+    color: white;
+    margin-left: 10px;
+}
+header .content .btns a:hover{
+    opacity: .7;
+}
+header .content button{
+    cursor: pointer;
+    padding: 8px 12px;
+    text-decoration: none;
+    width: 9%;
+    height: 50px;
+    border: none;
+    font-size: 15px;
+    font-weight: 600;
+    background: linear-gradient(90deg , rgba(68, 1, 68) , #0079ff);
+    border-radius: 25px;
+    color: white;
+    margin-left: 10px;
+}
+header .content button:hover{
+    opacity: .7;
+}
+header section{
+    position: absolute;
+    width: 100%;
+    height: auto;
+    padding: 0px 50px;
+    bottom: 20px;
+    color: snow;
+
+}
+header section .cards{
+    position: relative;
+    width: 100%;
+    height: 200px;
+    /* border: 1px solid rgb(60, 0, 255); */
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    overflow-x:auto ;
+}
+header section .cards .card{
+    position: relative;
+    min-width: 130px;
+    height: 180px;
+    /* border: 1px solid snow; */
+    border-radius: 10px;
+    margin-right: 10px;
+    background: black;
+    transition: .1s linear;
+}
+
+/* header section .cards::-webkit-scrollbar{
+display: none;
+} */
+header section .cards::-webkit-scrollbar{
+    height:5px ;
+    background: rgb(255, 255, 255,.2);
+    visibility: hidden;
+
+}
+header section .cards::-webkit-scrollbar-thumb{
+    height:5px ;
+    background: rgb(255, 255, 255,.5);
+    visibility: hidden;
+    
+}
+header section .cards:hover::-webkit-scrollbar{
+    visibility: visible;
+}
+header section .cards:hover::-webkit-scrollbar-thumb{
+    visibility: visible;
+}
+header section .cards .card .poster{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    margin-right: 10px;
+    position: relative;
+}
+header section .cards .card:hover{
+    width: 300px;
+    min-width: 300px;
+    overflow: hidden;
+}
+header section .cards .card .restCard{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    left: 0;
+    top:0;
+    z-index: 5;
+    opacity: 0;
+    transition: 1s linear;
+}
+header section .cards .card .restCard img{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    z-index: -1;
+}
+header section .cards .card .restCard::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg,transparent,#892be294);
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+}
+header section .cards .card .restCard .cont{
+    position: absolute;
+    width: 100%;
+    bottom: 10px;
+    left: 0;    
+    color: snow;
+    padding: 0px 20px;
+}
+header section .cards .card .restCard .cont .sup{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+header section .cards .card .restCard .cont .sup p{
+    font-size: 12px;
+    font-weight: 400;
+    color: rgb(255, 255, 255,.9);
+}
+header section .cards .card .restCard .cont .sup h3{
+    color: snow;
+    display: flex;
+    font-size: 12px;
+    align-items: center;
+}
+header section .cards .card .restCard .cont .sup h3 span{
+    font-size: 20px;
+    /* background-color: yellow; */
+    /* color: black; */
+    padding: 0px 3px;
+    margin: 0px 5px 0px 5px;
+
+}
+header section .cards .card .restCard .cont .sup h3 i{
+    color: orange;
+    font-size: 40px;
+    margin-right: 3px;
+}
+header section .cards .card:hover .restCard {
+    opacity: 1 ;
+}
+footer{
+    display:flex;
+    position: absolute;
+
+    text-align: center;
+    justify-content: space-between;
+    bottom: -10%; 
+    width: 100%;
+    height: 5%;
+    /* background:#c703c372; */
+    background: black;
+}
+footer a{
+    font-size: large;
+    text-decoration: underline;
+    color: #DC143C;
+}
+footer a:hover{
+    color: white;
+}
+footer h3{
+    padding-left:10px ;
+}
+footer p{
+    color: snow;
+    right: 0;
+    padding-right: 10px;
+    font-size: medium;
+}
+footer span{
+    color: #DC143C;
+}
+/* Extra styles for the cancel button */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+.vidcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+    position:static;
+}
+.vidcontainer video{
+    position: relative; 
+    top: 0;
+    left: 0;
+    width: 90%;
+    height: 90%; 
+    /* object-fit: cover; */
+    z-index:9;
+    /* top: 10%; */
+    /* margin: 0 auto; */
+    /* right: -100%;
+    transform: translate(31.5%,-5%); */
+}
+/* .vidcontainer span{
+    top: -5%;
+    right: 1%;
+} */
+
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 9; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  /* overflow: auto; Enable scroll if needed */
+  /* background-color: rgb(142, 0, 111); /* Fallback color */
+  /* background-color: rgba(80, 0, 142, 0.79); Black w/ opacity */ 
+  background: linear-gradient(180deg , rgb(104, 0, 169,.9) , rgba(0, 0, 0, 0.9)   );
+  padding-top: 60px;
+}
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: #ff0000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+.actors{
+    display:flex;
+    flex-wrap: wrap ;
+    justify-content: space-around;
+}
+.actor{
+    padding-right: 6%;
+}
+.actor img {
+    border-radius: 100%;
+    width: 100px;
+    height: 100px;
+}
