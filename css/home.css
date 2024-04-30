@@ -382,6 +382,22 @@ visibility: visible;
     margin-top: 12%;
     margin-bottom: 20%;
 }
+.TVShows .box .boximg img{
+    width: 90%;
+    height: 100%;
+    object-fit: cover;
+    
+}
+.TVShows .moviescontainer{
+    max-width: 968px;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(180px,auto));
+    gap:15%;
+    /* margin-top:6% ; */
+    margin-bottom: auto;
+}
 footer{
     display:flex;
     position: relative;
