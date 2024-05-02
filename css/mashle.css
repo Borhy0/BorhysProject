@@ -30,10 +30,12 @@ body{
     position: absolute;
 }
 header{
+    
     position: absolute;
     width: 80%;
     height: 90%;
-    border: 1px solid #FAF9F6;
+    /* border: 1px solid #FAF9F6; */
+    border-radius: 3%;
     /* border-radius: 20px; */
     overflow: hidden;
     box-shadow: 0px 10px 25px -5px #880086a9;
@@ -79,8 +81,8 @@ nav{
     /* border-top-left-radius: 20px; */
     /* border-top-right-radius: 20px; */
     /* border: 1px solid rgb(255, 255, 255) ; */
-    /* background:linear-gradient(360deg , rgba(68, 1, 68) , #000000 ); */
-    background: black;
+    background:linear-gradient(360deg , rgba(0, 0, 0, 0), #000000 );
+    /* background: black; */
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -159,7 +161,7 @@ nav .search_user ul li a{
     transition: .3s linear;
 }
 nav .search_user ul li a:hover{
-    color: purple;
+    color: #DC143C;
 }
 nav .search_user .search{
     overflow: auto;
