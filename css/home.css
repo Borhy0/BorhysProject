@@ -136,7 +136,7 @@ header nav .search_user ul li a{
     /* position:absolute; */
     text-decoration: none;
     color: white;
-    font-size: 250%;
+    font-size: 150%;
     font-weight: bold;
     transition: .3s linear;
 }
@@ -352,6 +352,7 @@ visibility: visible;
     grid-template-columns: repeat(auto-fit,minmax(180px,auto));
     gap:9%;
     margin-top:6% ;
+    margin-bottom: auto;
 }
 .box .boximg{
     width: 100%;
@@ -362,6 +363,7 @@ visibility: visible;
     width: 90%;
     height: 100%;
     object-fit: cover;
+    
 }
 .box .boximg img:hover{
     transform: translateY(-10px);
